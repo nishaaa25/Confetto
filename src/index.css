@@ -20,6 +20,14 @@ body{
   color:transparent;
   position: relative;
 }
+
+.overlay{
+  content: "";
+  position: absolute;
+  z-index: 30;
+  box-shadow: inset -10px -30px 30px rgb(19, 17, 17);
+}
+
 @layer utilities{
   .nav-link{
     @apply text-sm px-3 py-2 rounded-md custom-transition
