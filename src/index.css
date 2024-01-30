@@ -7,3 +7,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: black;
+  color: white;
+}
+.active{
+  background-color: black;
+}
+.gradient{
+  background-image: linear-gradient(90deg,grey, white , grey);
+  background-clip: text;
+  color:transparent;
+  position: relative;
+}
+@layer utilities{
+  .nav-link{
+    @apply text-sm px-3 py-2 rounded-md custom-transition
+  }
+  .flex-between{
+    @apply flex justify-between items-center
+  }
+  .flex-center{
+    @apply flex items-center justify-center
+  }
+  h1, h2{
+    @apply font-DMSans gradient;
+  }
+  p,a{
+    @apply font-Inter
+  }
+  .btn{
+    @apply py-2 px-4 rounded-full font-[500] custom-transition mx-2
+  }
+  .custom-transition{
+    @apply transition-all duration-300
+  }
+  .info-text{
+    @apply text-whitesmoke font-[300] text-sm
+  }
+}
+@layer components{
+  .container{
+    @apply w-[1340px] mx-auto relative h-full 
+  }
+}
