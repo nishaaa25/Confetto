@@ -1,8 +1,10 @@
 import Experience from "./components/Experience";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Power from "./components/Power";
 import Product from "./components/Product";
+import StartContainer from "./components/StartContainer";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Features/>
       <Power/>
       <Experience/>
+      <StartContainer/>
+      <Footer/>
     </div>
   );
 }

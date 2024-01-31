@@ -9,6 +9,7 @@ module.exports = {
         purple: "#840da7",
         voilet: "#887ef9",
         grey: "#96969e",
+        "grey-500":"#d8d5db",
         "grey-600": "#d3d3d3",
         "grey-400": "#d8d5d1",
         "black-600": "#19191b",

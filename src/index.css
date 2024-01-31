@@ -2,66 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: black;
   color: white;
 }
-.active{
+.active {
   background-color: black;
 }
-.gradient{
-  background-image: linear-gradient(90deg,rgb(88, 85, 85) , white , rgb(85, 83, 83));
+.gradient {
+  background-image: linear-gradient(
+    90deg,
+    rgb(88, 85, 85),
+    white,
+    rgb(85, 83, 83)
+  );
   background-clip: text;
-  color:transparent;
+  color: transparent;
   position: relative;
 }
+.custom-border{
+  border-radius: 4px;
+  background-image: linear-gradient(to right, rgb(0, 2, 128), rgb(44, 157, 233),violet, rgb(255, 196, 0), rgb(255, 0, 43), rgb(255, 0, 234),  purple);
+}
 
-.overlay{
+.overlay {
   content: "";
   position: absolute;
   z-index: 30;
   box-shadow: inset -10px -30px 30px rgb(19, 17, 17);
 }
 
-@layer utilities{
-  .nav-link{
-    @apply text-sm px-3 py-2 rounded-md custom-transition
+@layer utilities {
+  .nav-link {
+    @apply text-sm px-3 py-2 rounded-md custom-transition;
   }
-  .flex-between{
-    @apply flex justify-between items-center
+  .flex-between {
+    @apply flex justify-between items-center;
   }
-  .flex-center{
-    @apply flex items-center justify-center
+  .flex-center {
+    @apply flex items-center justify-center;
   }
-  h1, h2{
+  h1,
+  h2 {
     @apply font-DMSans gradient;
   }
-  p,a{
-    @apply font-Inter
+  p,
+  a,
+  span,li {
+    @apply font-Inter;
   }
-  .btn{
-    @apply py-2 px-4 rounded-full font-[500] custom-transition mx-2
+  .btn {
+    @apply py-2 px-4 rounded-full font-[500] custom-transition mx-2;
   }
-  .custom-transition{
-    @apply transition-all duration-300
+  .custom-transition {
+    @apply transition-all duration-300;
   }
-  .info-text{
-    @apply text-whitesmoke font-[300] text-sm
+  .info-text {
+    @apply text-whitesmoke font-[300] text-sm;
   }
-  .para-text{
-    @apply text-grey-400 text-opacity-80 font-[300] text-base
+  .para-text {
+    @apply text-grey-400 text-opacity-80 font-[300] text-base;
   }
-  .card{
-    @apply rounded-2xl bg-black-600 border border-grey border-opacity-20
+  .card {
+    @apply w-full rounded-2xl bg-black-600 border border-grey border-opacity-20;
   }
 }
-@layer components{
-  .container{
-    @apply w-[1340px] mx-auto relative h-full 
+@layer components {
+  .container {
+    @apply w-[1340px] mx-auto relative h-full;
   }
 }
