@@ -1,5 +1,7 @@
+import Experience from "./components/Experience";
 import Features from "./components/Features";
 import Header from "./components/Header";
+import Power from "./components/Power";
 import Product from "./components/Product";
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       </div>
       <Product />
       <Features/>
+      <Power/>
+      <Experience/>
     </div>
   );
 }

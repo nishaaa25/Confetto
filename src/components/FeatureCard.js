@@ -11,7 +11,7 @@ const FeatureCard = ({ features }) => {
       </div>
       <div className="mt-10">
         <h3 className="text-xl font-Inter mb-3">{features.title}</h3>
-        <p className="text-grey-400 text-opacity-80 font-[300] text-base">{features.desc}</p>
+        <p className="para-text">{features.desc}</p>
       </div>
     </div>
   );
