@@ -6,7 +6,7 @@ import asset56 from "../assets/asset 56.svg";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full h-full overflow-hidden">
+    <footer id="footer" className="relative w-full h-full overflow-hidden">
       <div className="footer-content bg-black relative z-10 mt-[1px] rounded-t-[100px]">
         <div className="footer-text container relative p-7 ">
           <div className="footer-top flex-between mb-20 mt-8">
@@ -20,12 +20,12 @@ const Footer = () => {
                   id="email"
                   className="p-3 text-sm bg-black-700 border border-grey border-opacity-50 rounded-md mr-2 placeholder:text-grey "
                 />
-                <button className="bg-purple rounded-lg px-6 py-3 text-[17px] font-[500]">Sign up</button>
+                <button className="bg-purple rounded-lg px-6 py-3 text-[14px] font-[500]">Sign up</button>
               </div>
               <div className="flex-between gap-8">
-                <img src={asset54} alt="icon" />
-                <img src={asset55} alt="icon" />
-                <img src={asset56} alt="icon" />
+                <img src={asset54} alt="icon" className="cursor-pointer"/>
+                <img src={asset55} alt="icon" className="cursor-pointer"/>
+                <img src={asset56} alt="icon" className="cursor-pointer"/>
               </div>
             </div>
             <div className="footer-right flex-between w-[460px]">
