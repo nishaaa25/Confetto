@@ -15,7 +15,7 @@ const PowerCard1 = () => {
           further than our field app. Our app is designed to streamline
           fieldwork processes and eliminate the need for manual paperwork.
         </p>
-        <a href="/" className="text-base mb-12">
+        <p href="" className="text-base mb-12">
           Meet our customers
           <img
             src={asset20}
@@ -23,7 +23,7 @@ const PowerCard1 = () => {
             className="inline-block ml-1"
             width={12}
           />
-        </a>
+        </p>
         <div className="grid grid-cols-2 w-full relative gap-7">
           <div className="card  p-5">
             <p className="text-2xl text-voilet font-[500]">€91.28K</p>

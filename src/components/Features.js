@@ -4,7 +4,7 @@ import FeatureCard from "./FeatureCard";
 
 const Features = () => {
   return (
-    <div className="features">
+    <div id="feature" className="features">
       <div className="feature-content container text-center px-7 py-[88px]">
         <div className="feature-text w-full pb-2 ">
           <h1 className="text-4xl font-[500] mb-3 w-[50%] mx-auto">

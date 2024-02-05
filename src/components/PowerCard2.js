@@ -19,7 +19,7 @@ const PowerCard2 = () => {
           inefficient operations and hello to significant cost savings with our
           field app.
         </p>
-        <a href="/" className="text-base mb-12">
+        <a href="#start" className="text-base mb-12">
           Get started with Confetti
           <img
             src={asset20}

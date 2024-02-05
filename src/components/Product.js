@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import asset20 from "../assets/asset 20.svg";
 import asset1 from "../assets/asset 1.png";
 import asset2 from "../assets/asset 2.jpeg";
@@ -8,10 +8,22 @@ import asset5 from "../assets/asset 5.svg";
 import asset6 from "../assets/asset 6.svg";
 import asset7 from "../assets/asset7.jpg";
 import Reviews from "./Reviews";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Product = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.5, 1.1]);
+  const translate = useTransform(scrollYProgress, [0.4, 0.6], ["0px", "-120px"]);
+  const translateX = useTransform(scrollYProgress, [0, 0.4], ["100px", "-180px"]);
+  const translateY = useTransform(scrollYProgress, [0.4, 0.6], ["-20px", "100px"]);
+  const translateX2 = useTransform(scrollYProgress, [0, 0.4], ["0px", "130px"]);
+  const translateY2 = useTransform(scrollYProgress, [0, 0.6], ["-100px", "640px"]);
   return (
-    <div className="product w-full relative p-[70px]">
+    <div id="product" className="product w-full p-[70px]">
       <div className="productContent w-full relative">
         <img
           src={asset7}
@@ -42,8 +54,11 @@ const Product = () => {
             </a>
           </div>
         </div>
-        <div className="productImg h-[1019px] relative z-40 w-full mx-auto mt-16 ">
-          <div className="w-[500px] mx-auto h-full relative overflow-hidden ">
+        <motion.div
+          ref={ref}
+          className="productImg h-[1019px] relative z-40 w-full mx-auto mt-16 "
+        >
+          <motion.div className="w-[500px] mx-auto h-full relative " style={{translateY : translate}}>
             <img
               src={asset1}
               alt="asset1"
@@ -54,35 +69,40 @@ const Product = () => {
               alt="asset2"
               className="w-full h-full p-5 absolute top-0 rounded-[50px] z-20"
             />
-            <img
+            <motion.img
               src={asset3}
               alt="asset3"
-              className="absolute top-28 scale-[0.8] rounded-3xl z-40"
+              className="absolute top-28 rounded-3xl z-40"
+              style={{ scale }}
             />
-          </div>
-          <img
+          </motion.div>
+          <motion.img
             src={asset4}
             alt="asset4"
-            className="absolute top-10 rounded-[36px] left-[198px] z-10"
+            className="absolute top-10 rounded-[36px] left-[236px] z-10"
+            style={{ translateX: translateX , translateY: translateY}}
           />
-          <img
+          <motion.img
             src={asset5}
             alt="asset5"
-            className="absolute w-36 top-[326px] left-[286px] rounded-[20px] z-10"
+            className="absolute w-44 top-[326px] left-[326px] rounded-[20px] z-10"
+             style={{ translateX: translateX , translateY: translateY, scale}}
           />
-          <img
+          <motion.img
             src={asset6}
             alt="asset6"
-            className="absolute -top-12 right-[100px] rounded-[30px] z-10"
+            className="absolute -top-48 right-[180px] rounded-[30px] z-10"
+            style={{ translateX: translateX2 , translateY: translateY2}}
           />
-          <img
+          <motion.img
             src={asset6}
             alt="asset6"
-            className="absolute top-36 right-[48px] rounded-[30px] z-10"
+            className="absolute -top-4 right-[48px] rounded-[30px] z-10"
+            style={{translateY: translateY2}}
           />
-        </div>
+        </motion.div>
       </div>
-      <Reviews/>
+      <Reviews />
     </div>
   );
 };

@@ -6,10 +6,10 @@ import asset56 from "../assets/asset 56.svg";
 
 const Footer = () => {
   return (
-    <footer className="rounded-full relative w-full ">
-      <div className="footer-content container bg-black relative">
-        <div className="footer-text p-7">
-          <div className="footer-top flex-between mb-24">
+    <footer className="relative w-full h-full overflow-hidden">
+      <div className="footer-content bg-black relative z-10 mt-[1px] rounded-t-[100px]">
+        <div className="footer-text container relative p-7 ">
+          <div className="footer-top flex-between mb-20 mt-8">
             <div className="footer-left flex justify-between items-start flex-col gap-8">
               <p className="font-[500]">Join for free career tips!</p>
               <div className="font-Inter">
@@ -76,12 +76,13 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className=" border-t border-grey border-opacity-30 py-10 flex-between">
+          <div className=" border-t border-grey border-opacity-30 py-8 flex-between">
             <p className="text-[17px] ">CREATED BY NISHA</p>
             <p  className="text-[17px]">Copyright &copy; 2024</p>
           </div>
         </div>
       </div>
+      <div className="custom-border"></div>
     </footer>
   );
 };

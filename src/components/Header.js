@@ -1,5 +1,6 @@
 import React from "react";
 import asset0 from "../assets/asset 0.svg";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,22 +11,22 @@ const Header = () => {
           <div className="w-full py-2 pl-12">
             <ul className="flex-between">
               <li>
-                <a href="/" className="nav-link active">
+                <a href="/" className={`nav-link active`}>
                   Product
                 </a>
               </li>
               <li>
-                <a href="/feature" className="nav-link">
+                <a href="#feature" className="nav-link">
                   Features
                 </a>
               </li>
               <li>
-                <a href="/power" className="nav-link">
+                <a href="#power" className="nav-link">
                   Power
                 </a>
               </li>
               <li>
-                <a href="/experience" className="nav-link">
+                <a href="#experience" className="nav-link">
                   Experience
                 </a>
               </li>

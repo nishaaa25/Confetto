@@ -4,7 +4,7 @@ import PowerCard2 from "./PowerCard2";
 
 const Power = () => {
   return (
-    <div className="power">
+    <div id="power" className="power">
       <div className="power-content container text-center p-7">
         <div className="power-text pt-28 pb-3">
             <h1 className="text-4xl font-[500] mb-3">Discover the Power of Confetti</h1>
