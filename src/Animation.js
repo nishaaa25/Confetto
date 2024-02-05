@@ -44,7 +44,7 @@ export const variants = {
         rotateX: 0,
         transition:{
             duration:0.6,
-            type:"string"
+            type:"spring"
         }
     }
 }
@@ -58,6 +58,21 @@ export const productImgVariants2 = {
         rotateX: 0,
         transition:{
             duration:0.8,
+        }
+    }
+}
+export const childrenVariants = {
+    hidden:{
+        opacity:0, 
+        y: "30px"
+    },
+    visible:{
+        opacity:1,
+        y: "0px",
+        transition:{
+            delay:0.3,
+            duration: 0.8,
+            type:"spring",
         }
     }
 }

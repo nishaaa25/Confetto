@@ -9,20 +9,41 @@ import asset14 from "../assets/asset 14.svg";
 import asset15 from "../assets/asset 15.svg";
 import asset16 from "../assets/asset 16.svg";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import { childrenVariants} from "../Animation";
 
 const Reviews = () => {
   return (
-    <div className="reviews mt-16 mb-10 text-center relative">
+    <motion.div 
+      className="reviews mt-16 mb-10 text-center relative"
+    >
       <div>
-        <p className="text-2xl font-[500] gradient w-[20%] mx-auto mb-3">
+        <motion.p
+          variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-2xl font-[500] gradient w-[20%] mx-auto mb-3"
+        >
           +600 reviews
-        </p>
-        <p className="info-text w-[14%] mx-auto">
+        </motion.p>
+        <motion.p
+          variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="info-text w-[14%] mx-auto"
+        >
           Companies building custom tools with Confetti.
-        </p>
+        </motion.p>
       </div>
-      <div className="w-full mt-10">
-        
+      <motion.div
+        className="w-full mt-10"
+        variants={childrenVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <Marquee>
           <img src={asset8} alt="asset8" className="mx-10" />
           <img src={asset9} alt="asset9" className="mx-10" />
@@ -34,8 +55,8 @@ const Reviews = () => {
           <img src={asset15} alt="asset15" className="mx-10" />
           <img src={asset16} alt="asset16" className="mx-10" />
         </Marquee>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -9,7 +9,13 @@ import asset6 from "../assets/asset 6.svg";
 import asset7 from "../assets/asset7.jpg";
 import Reviews from "./Reviews";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { productImgVariants,productImgVariants2, productVariants, textVariants, variants } from "../Animation";
+import {
+  productImgVariants,
+  productImgVariants2,
+  productVariants,
+  textVariants,
+  variants,
+} from "../Animation";
 
 const Product = () => {
   const ref = useRef(null);
@@ -18,25 +24,57 @@ const Product = () => {
     offset: ["start end", "end start"],
   });
   const scale = useTransform(scrollYProgress, [0, 0.4], [0.5, 1.1]);
-  const translate = useTransform(scrollYProgress, [0.4, 0.6], ["0px", "-120px"]);
-  const translateX = useTransform(scrollYProgress, [0, 0.4], ["100px", "-180px"]);
-  const translateY = useTransform(scrollYProgress, [0.4, 0.6], ["-20px", "100px"]);
+  const translate = useTransform(
+    scrollYProgress,
+    [0.4, 0.6],
+    ["0px", "-120px"]
+  );
+  const translateX = useTransform(
+    scrollYProgress,
+    [0, 0.4],
+    ["100px", "-180px"]
+  );
+  const translateY = useTransform(
+    scrollYProgress,
+    [0.4, 0.6],
+    ["-20px", "100px"]
+  );
   const translateX2 = useTransform(scrollYProgress, [0, 0.4], ["0px", "130px"]);
-  const translateY2 = useTransform(scrollYProgress, [0, 0.6], ["-100px", "640px"]);
+  const translateY2 = useTransform(
+    scrollYProgress,
+    [0, 0.6],
+    ["-100px", "640px"]
+  );
   return (
     <div id="product" className="product w-full p-[70px]">
-      <motion.div variants={productVariants} initial="hidden" whileInView="visible" className="productContent w-full relative">
-        <motion.img variants={productImgVariants}
+      <motion.div
+        variants={productVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="productContent w-full relative"
+      >
+        <motion.img
+          variants={productImgVariants}
           src={asset7}
           alt="backgroundImg"
           className=" mx-auto w-full h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
         />
-        <motion.div variants={textVariants} className="productText flex-center flex-col top-0 text-center relative z-40">
-          <motion.div variants={variants} className="tagline text-xs py-[6px] px-4 bg-purple-dark flex-center gap-2 rounded-full mb-7 ">
+        <motion.div
+          variants={textVariants}
+          className="productText flex-center flex-col top-0 text-center relative z-40"
+        >
+          <motion.div
+            variants={variants}
+            className="tagline text-xs py-[6px] px-4 bg-purple-dark flex-center gap-2 rounded-full mb-7 "
+          >
             <p>Simplify Finicial Management -- Learn img</p>
             <img src={asset20} alt="arrow" width={10} />
           </motion.div>
-          <motion.h1 variants={variants} className="text-4xl font-[500] mb-7 w-[40%] ">
+          <motion.h1
+            variants={variants}
+            className="text-4xl font-[500] mb-7 w-[40%] "
+          >
             Streamline Your Banking Experience
           </motion.h1>
           <motion.p variants={variants} className="info-text mb-10 w-[29%]">
@@ -60,7 +98,10 @@ const Product = () => {
           variants={productImgVariants2}
           className="productImg h-[1019px] relative z-40 w-full mx-auto mt-16 "
         >
-          <motion.div className="w-[500px] mx-auto h-full relative " style={{translateY : translate}}>
+          <motion.div
+            className="w-[500px] mx-auto h-full relative "
+            style={{ translateY: translate }}
+          >
             <img
               src={asset1}
               alt="asset1"
@@ -82,25 +123,25 @@ const Product = () => {
             src={asset4}
             alt="asset4"
             className="absolute top-10 rounded-[36px] left-[236px] z-10"
-            style={{ translateX: translateX , translateY: translateY}}
+            style={{ translateX: translateX, translateY: translateY }}
           />
           <motion.img
             src={asset5}
             alt="asset5"
             className="absolute w-44 top-[326px] left-[326px] rounded-[20px] z-10"
-             style={{ translateX: translateX , translateY: translateY, scale}}
+            style={{ translateX: translateX, translateY: translateY, scale }}
           />
           <motion.img
             src={asset6}
             alt="asset6"
             className="absolute -top-48 right-[180px] rounded-[30px] z-10"
-            style={{ translateX: translateX2 , translateY: translateY2}}
+            style={{ translateX: translateX2, translateY: translateY2 }}
           />
           <motion.img
             src={asset6}
             alt="asset6"
             className="absolute -top-4 right-[48px] rounded-[30px] z-10"
-            style={{translateY: translateY2}}
+            style={{ translateY: translateY2 }}
           />
         </motion.div>
       </motion.div>
