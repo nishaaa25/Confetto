@@ -1,11 +1,10 @@
 import React from "react";
 import asset57 from "../assets/asset57.jpeg";
-import { motion } from "framer-motion";
 
 
 const FeatureCard = ({ features }) => {
   return (
-    <div className="relative  group">
+    <div className="relative group">
       <div className="featureImg custom-shadow relative w-full h-[200px] rounded-xl overflow-hidden">
         <div className="overlay w-full h-full"></div>
         <img src={features.imgUrl} alt="img" className="absolute w-full h-full object-cover right-0 bottom-0 z-20 "/>
