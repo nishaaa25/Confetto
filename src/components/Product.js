@@ -9,6 +9,7 @@ import asset6 from "../assets/asset 6.svg";
 import asset7 from "../assets/asset7.jpg";
 import Reviews from "./Reviews";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { productImgVariants,productImgVariants2, productVariants, textVariants, variants } from "../Animation";
 
 const Product = () => {
   const ref = useRef(null);
@@ -24,25 +25,25 @@ const Product = () => {
   const translateY2 = useTransform(scrollYProgress, [0, 0.6], ["-100px", "640px"]);
   return (
     <div id="product" className="product w-full p-[70px]">
-      <div className="productContent w-full relative">
-        <img
+      <motion.div variants={productVariants} initial="hidden" whileInView="visible" className="productContent w-full relative">
+        <motion.img variants={productImgVariants}
           src={asset7}
           alt="backgroundImg"
           className=" mx-auto w-full h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
         />
-        <div className="productText flex-center flex-col top-0 text-center relative z-40">
-          <div className="tagline text-xs py-[6px] px-4 bg-purple-dark flex-center gap-2 rounded-full mb-7 ">
+        <motion.div variants={textVariants} className="productText flex-center flex-col top-0 text-center relative z-40">
+          <motion.div variants={variants} className="tagline text-xs py-[6px] px-4 bg-purple-dark flex-center gap-2 rounded-full mb-7 ">
             <p>Simplify Finicial Management -- Learn img</p>
             <img src={asset20} alt="arrow" width={10} />
-          </div>
-          <h1 className="text-4xl font-[500] mb-7 w-[40%] ">
+          </motion.div>
+          <motion.h1 variants={variants} className="text-4xl font-[500] mb-7 w-[40%] ">
             Streamline Your Banking Experience
-          </h1>
-          <p className="info-text mb-10 w-[29%]">
+          </motion.h1>
+          <motion.p variants={variants} className="info-text mb-10 w-[29%]">
             Experience hassle-free banking card management and transactions with
             our platform with our user-friendly interface.
-          </p>
-          <div>
+          </motion.p>
+          <motion.div variants={variants}>
             <a
               href="/"
               className="btn hover:bg-purple hover:text-white bg-white text-black "
@@ -52,10 +53,11 @@ const Product = () => {
             <a href="/" className="btn hover:text-grey-600 ">
               Watch Video
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <motion.div
           ref={ref}
+          variants={productImgVariants2}
           className="productImg h-[1019px] relative z-40 w-full mx-auto mt-16 "
         >
           <motion.div className="w-[500px] mx-auto h-full relative " style={{translateY : translate}}>
@@ -101,7 +103,7 @@ const Product = () => {
             style={{translateY: translateY2}}
           />
         </motion.div>
-      </div>
+      </motion.div>
       <Reviews />
     </div>
   );

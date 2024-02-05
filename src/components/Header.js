@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import asset0 from "../assets/asset 0.svg";
+import { motion } from "framer-motion";
+
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("product");
@@ -41,7 +43,7 @@ const Header = () => {
   }, []); 
 
   return (
-    <div className="header w-full relative">
+    <motion.div className="header w-full relative" initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 2.7, duration:0.6}}>
       <div className="navbar bg-black-500 w-[668px] mx-auto my-3 py-[5px] pl-[14px] pr-1 rounded-lg">
         <div className="flex-between ">
           <img src={asset0} alt="logo" className="logo" />
@@ -99,7 +101,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
