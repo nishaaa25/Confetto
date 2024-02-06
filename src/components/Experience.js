@@ -8,6 +8,7 @@ import asset30 from "../assets/asset 30.webp";
 import asset32 from "../assets/asset 32.webp";
 import asset31 from "../assets/asset 31.webp";
 import { motion } from "framer-motion";
+import { childrenVariants } from "../Animation";
 
 const Experience = () => {
   const [imgUrl, setImgUrl] = useState(asset29);
@@ -17,13 +18,22 @@ const Experience = () => {
     <div id="experience" className="experience">
       <div className="experience-content container text-center p-7">
         <div className="experience-text pt-28 pb-3">
-          <h1 className="text-4xl font-[500] mb-3">Seamless Experience</h1>
-          <p className="info-text w-[30%] mx-auto">
+          <motion.h1  variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} className="text-4xl font-[500] mb-3">Seamless Experience</motion.h1>
+          <motion.p  variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} className="info-text w-[30%] mx-auto">
             Our top features are designed to provide you with a seamless
             experience and make your financial management as easy as possible.
-          </p>
+          </motion.p>
         </div>
-        <div className="py-16">
+        <motion.div  variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} className="py-16">
           <div className="w-full flex-center gap-8 px-28">
             <div
               className={`card ${
@@ -94,7 +104,7 @@ const Experience = () => {
               className="w-full h-full custom-transition"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

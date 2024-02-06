@@ -14,7 +14,7 @@ import { childrenVariants} from "../Animation";
 
 const Reviews = () => {
   return (
-    <motion.div 
+    <div 
       className="reviews mt-16 mb-10 text-center relative"
     >
       <div>
@@ -56,7 +56,7 @@ const Reviews = () => {
           <img src={asset16} alt="asset16" className="mx-10" />
         </Marquee>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
