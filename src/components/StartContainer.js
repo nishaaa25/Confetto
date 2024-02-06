@@ -22,22 +22,39 @@ import asset51 from "../assets/asset 51.png";
 import asset52 from "../assets/asset 52.png";
 import asset53 from "../assets/asset 53.jpeg";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import { childrenVariants } from "../Animation";
 
 const StartContainer = () => {
   return (
     <div id="start" className="start">
       <div className="start-content container text-center p-7">
         <div className="start-text pt-10 pb-3">
-          <h1 className="text-4xl font-[500] mb-3 w-[60%] mx-auto">
+          <motion.h1
+            variants={childrenVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-4xl font-[500] mb-3 w-[60%] mx-auto"
+          >
             Start Your Financial Journey Today
-          </h1>
-          <p className="info-text w-[29%] mx-auto">
+          </motion.h1>
+          <motion.p
+            variants={childrenVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="info-text w-[29%] mx-auto"
+          >
             Are you ready to take control of your finances and start your
             financial journey? Look no further than our platform.
-          </p>
+          </motion.p>
         </div>
         <div className="my-12">
-          <div className="flex-between gap-[30px] relative w-full h-[684px] ">
+          <motion.div variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} className="flex-between gap-[30px] relative w-full h-[684px] ">
             <div className="w-[418px] h-full relative">
               <div className="grid grid-cols-2 gap-[30px] w-full h-[194px] relative ">
                 <div className="rounded-[20px] overflow-hidden hover">
@@ -92,8 +109,11 @@ const StartContainer = () => {
                 Unified cross platform experience
               </p>
             </div>
-          </div>
-          <div className="w-full h-[353px] grid grid-cols-2 gap-[30px] mt-[30px]">
+          </motion.div>
+          <motion.div  variants={childrenVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} className="w-full h-[353px] grid grid-cols-2 gap-[30px] mt-[30px]">
             <div className="bg-black-800 relative rounded-[20px] py-10 hover">
               <div className="w-full mb-[30px]">
                 <Marquee speed={15}>
@@ -127,7 +147,7 @@ const StartContainer = () => {
                 Great design right out of the box
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
