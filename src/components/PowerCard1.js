@@ -13,14 +13,14 @@ import {
 
 const PowerCard1 = () => {
   return (
-    <div className="powercard w-full h-[679px] relative one flex-between gap-7">
-      <div className="flex flex-col justify-start text-start items-start">
+    <div className="powercard w-full h-full lg:h-[679px] relative one flex-between flex-wrap lg:flex-nowrap gap-7">
+      <div className="flex h-full flex-col justify-start text-start items-start">
         <motion.h2
           variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl mb-5 w-[66%] font-[500]"
+          className="text-[28px] lg:text-3xl mb-5 w-full lg:w-[66%] font-[500]"
         >
           A field app that saves €91284 a year
         </motion.h2>
@@ -29,7 +29,7 @@ const PowerCard1 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="para-text w-[80%] mb-8"
+          className="para-text w-full lg:w-[80%] mb-8"
         >
           Looking for a way to reduce costs associated with fieldwork? Look no
           further than our field app. Our app is designed to streamline
@@ -71,7 +71,7 @@ const PowerCard1 = () => {
           </motion.div>
         </motion.div>
       </div>
-      <div className="w-[100%] h-full relative rounded-3xl overflow-hidden">
+      <div className="w-[100%] h-[492px] lg:h-full  relative rounded-3xl overflow-hidden">
         <motion.img
           variants={imgVariants}
           initial="hidden"

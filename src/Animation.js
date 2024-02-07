@@ -105,14 +105,14 @@ hidden:{
 visible:{
   rotate:0,
   transition: {
-    duration: 0.6,
+    duration: 0.8,
   },
 }
 }
 export const imgVariants2={
   hidden:{
     rotateY:  90,
-    x: 280,
+    x: 214,
     opacity:0,
 
   },
@@ -121,7 +121,7 @@ export const imgVariants2={
     x:0,
     opacity:1,
     transition: {
-      delay:0.8,
+      delay:0.6,
       duration: 0.5,
     },
   }

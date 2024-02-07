@@ -35,7 +35,7 @@ const StartContainer = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl font-[500] mb-3 w-[60%] mx-auto"
+            className="text-xl lg:text-4xl font-[500] mb-3 w-full lg:w-[60%] mx-auto"
           >
             Start Your Financial Journey Today
           </motion.h1>
@@ -44,7 +44,7 @@ const StartContainer = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="info-text w-[29%] mx-auto"
+            className="info-text w-[90%] lg:w-[29%] mx-auto"
           >
             Are you ready to take control of your finances and start your
             financial journey? Look no further than our platform.
@@ -54,8 +54,8 @@ const StartContainer = () => {
           <motion.div variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} className="flex-between gap-[30px] relative w-full h-[684px] ">
-            <div className="w-[418px] h-full relative">
+          viewport={{ once: true }} className="flex-between flex-wrap gap-[30px] relative w-full h-full lg:h-[684px] ">
+            <div className="w-full lg:w-[418px] h-full relative">
               <div className="grid grid-cols-2 gap-[30px] w-full h-[194px] relative ">
                 <div className="rounded-[20px] overflow-hidden hover">
                   <img
@@ -92,7 +92,7 @@ const StartContainer = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[836px] h-full bg-black-800 rounded-[20px] overflow-hidden relative hover">
+            <div className="w-full lg:w-[836px] h-full bg-black-800 rounded-[20px] overflow-hidden relative hover">
               <div className="w-[460px] mx-auto relative my-10">
                 <img
                   src={asset37}
@@ -137,12 +137,12 @@ const StartContainer = () => {
                   <img src={asset52} alt="logo" className="w-16 mx-4" />
                 </Marquee>
               </div>
-              <p className="absolute bottom-20 left-10 font-[500] text-start">
+              <p className="absolute bottom-10 lg:bottom-20 left-10 font-[500] text-start">
                 Great design right out of the box
               </p>
             </div>
             <div className="w-full relative rounded-[20px] overflow-hidden hover">
-              <img src={asset53} alt="desktop" />
+              <img src={asset53} alt="desktop"  className="w-full h-full relative object-cover"/>
               <p className="absolute bottom-10 left-10 font-[500] text-start">
                 Great design right out of the box
               </p>

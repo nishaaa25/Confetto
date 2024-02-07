@@ -27,7 +27,7 @@ const Product = () => {
   const translate = useTransform(
     scrollYProgress,
     [0.4, 0.6],
-    ["0px", "-120px"]
+    ["0px", "-50px"]
   );
   const translateX = useTransform(
     scrollYProgress,
@@ -46,7 +46,7 @@ const Product = () => {
     ["-100px", "640px"]
   );
   return (
-    <div id="product" className="product w-full p-[70px]">
+    <div id="product" className="product w-full px-[20px] py-[70px] lg:p-[70px]">
       <motion.div
         variants={productVariants}
         initial="hidden"
@@ -58,7 +58,7 @@ const Product = () => {
           variants={productImgVariants}
           src={asset7}
           alt="backgroundImg"
-          className=" mx-auto w-full h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
+          className=" mx-auto w-full h-[588px] lg:h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
         />
         <motion.div
           variants={textVariants}
@@ -73,11 +73,11 @@ const Product = () => {
           </motion.div>
           <motion.h1
             variants={variants}
-            className="text-4xl font-[500] mb-7 w-[40%] "
+            className="text-xl lg:text-4xl font-[500] mb-7 w-full lg:w-[40%] "
           >
             Streamline Your Banking Experience
           </motion.h1>
-          <motion.p variants={variants} className="info-text mb-10 w-[29%]">
+          <motion.p variants={variants} className="info-text mb-10 w-[90%] lg:w-[29%]">
             Experience hassle-free banking card management and transactions with
             our platform with our user-friendly interface.
           </motion.p>
@@ -96,10 +96,10 @@ const Product = () => {
         <motion.div
           ref={ref}
           variants={productImgVariants2}
-          className="productImg h-[1019px] relative z-40 w-full mx-auto mt-16 "
+          className="productImg h-[570px] lg:h-[1019px] relative z-40 w-full mx-auto mt-16 "
         >
           <motion.div
-            className="w-[500px] mx-auto h-full relative "
+            className="w-[280px] lg:w-[500px] mx-auto h-full relative "
             style={{ translateY: translate }}
           >
             <img
@@ -110,7 +110,7 @@ const Product = () => {
             <img
               src={asset2}
               alt="asset2"
-              className="w-full h-full p-5 absolute top-0 rounded-[50px] z-20"
+              className="w-full h-full p-3 lg:p-5 absolute top-0 rounded-[50px] z-20"
             />
             <motion.img
               src={asset3}
@@ -122,25 +122,25 @@ const Product = () => {
           <motion.img
             src={asset4}
             alt="asset4"
-            className="absolute top-10 rounded-[36px] left-[236px] z-10"
+            className="hidden lg:block absolute top-10 rounded-[36px] left-[236px] z-10"
             style={{ translateX: translateX, translateY: translateY }}
           />
           <motion.img
             src={asset5}
             alt="asset5"
-            className="absolute w-44 top-[326px] left-[326px] rounded-[20px] z-10"
+            className="hidden lg:block absolute w-44 top-[326px] left-[326px] rounded-[20px] z-10"
             style={{ translateX: translateX, translateY: translateY, scale }}
           />
           <motion.img
             src={asset6}
             alt="asset6"
-            className="absolute -top-48 right-[180px] rounded-[30px] z-10"
+            className="hidden lg:block absolute -top-48 right-[180px] rounded-[30px] z-10"
             style={{ translateX: translateX2, translateY: translateY2 }}
           />
           <motion.img
             src={asset6}
             alt="asset6"
-            className="absolute -top-4 right-[48px] rounded-[30px] z-10"
+            className="hidden lg:block absolute -top-4 right-[48px] rounded-[30px] z-10"
             style={{ translateY: translateY2 }}
           />
         </motion.div>

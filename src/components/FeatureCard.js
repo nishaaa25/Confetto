@@ -11,7 +11,7 @@ const FeatureCard = ({ features }) => {
         <img src={asset57} alt="asset57" className="object-cover transform scale-125 group-hover:rotate-180 transition duration-[5s] blur-[20px]"/>
       </div>
       <div className="mt-10 group-hover:scale-110 transition duration-700">
-        <h3 className="text-xl font-Inter mb-3">{features.title}</h3>
+        <h3 className="text-[22px] lg:text-xl font-Inter mb-3">{features.title}</h3>
         <p className="para-text">{features.desc}</p>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import asset0 from "../assets/asset 0.svg";
 import { motion } from "framer-motion";
-
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("product");
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,15 +41,30 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   return (
-    <motion.div className="header w-full relative" initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 2.7, duration:0.6}}>
-      <div className="navbar bg-black-500 w-[668px] mx-auto my-3 py-[5px] pl-[14px] pr-1 rounded-lg">
+    <motion.div
+      className="header w-full relative"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 2.7, duration: 0.6 }}
+    >
+      <div className="navbar bg-black-500 w-[60vw] lg:w-[668px] mx-auto py-1 lg:py-3 pl-[14px] pr-1 rounded-lg">
         <div className="flex-between ">
           <img src={asset0} alt="logo" className="logo" />
-          <div className="w-full py-2 pl-12">
-            <ul className="flex-between">
+          <div
+            className={`${active ? "bg-purple rounded-md":""} lg:hidden w-[40px] flex-center h-[40px] mr-1 cursor-pointer`}
+            onClick={() => {
+              setActive(!active);
+            }}
+          >
+            <MenuRoundedIcon />
+          </div>
+          <div
+            className={`${active ? "block ": "hidden"} absolute top-[54px] left-0 lg:left-0 lg:top-0 lg:relative lg:block w-full py-2 lg:pl-12 custom-transition`}
+          >
+            <ul className="flex-between h-[290px] lg:h-full flex-col lg:flex-row w-full bg-[#0d0d0d] py-6 lg:p-0 lg:bg-transparent">
               <li>
                 <a
                   href="#product"

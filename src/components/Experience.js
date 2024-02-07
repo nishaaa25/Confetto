@@ -17,15 +17,15 @@ const Experience = () => {
   return (
     <div id="experience" className="experience">
       <div className="experience-content container text-center p-7">
-        <div className="experience-text pt-28 pb-3">
+        <div className="experience-text pt-8 lg:pt-28 pb-3">
           <motion.h1  variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} className="text-4xl font-[500] mb-3">Seamless Experience</motion.h1>
+          viewport={{ once: true }} className="text-xl lg:text-4xl font-[500] mb-3">Seamless Experience</motion.h1>
           <motion.p  variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} className="info-text w-[30%] mx-auto">
+          viewport={{ once: true }} className="info-text w-[80%] lg:w-[30%] mx-auto">
             Our top features are designed to provide you with a seamless
             experience and make your financial management as easy as possible.
           </motion.p>
@@ -34,11 +34,11 @@ const Experience = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }} className="py-16">
-          <div className="w-full flex-center gap-8 px-28">
+          <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 px-0 lg:px-28">
             <div
               className={`card ${
                 active === 0 ? "active-card" : ""
-              }  px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
+              }  px-4 lg:px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
               onClick={() => {
                 setImgUrl(asset29);
                 setActive(0);
@@ -54,7 +54,7 @@ const Experience = () => {
             <div
               className={`card ${
                 active === 1 ? "active-card" : ""
-              }  px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
+              }  px-4 lg:px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
               onClick={() => {
                 setImgUrl(asset30);
                 setActive(1);
@@ -62,14 +62,14 @@ const Experience = () => {
             >
               <img src={asset23} alt="asset23" width={24} className="svg" />
               <p className="text-sm text-grey-400">
-                Customize and tune <br />
+                Custoze and tune <br />
                 <span className="text-grey">your app's interface</span>
               </p>
             </div>
             <div
               className={`card ${
                 active === 2 ? "active-card" : ""
-              }  px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
+              }  px-4 lg:px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
               onClick={() => {
                 setImgUrl(asset31);
                 setActive(2);
@@ -84,7 +84,7 @@ const Experience = () => {
             <div
               className={`card ${
                 active === 3 ? "active-card" : ""
-              }  px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
+              }  px-4 lg:px-6 py-[21px] flex justify-start items-center gap-4 text-start opacity-50 custom-transition`}
               onClick={() => {
                 setImgUrl(asset32);
                 setActive(3);
@@ -101,7 +101,7 @@ const Experience = () => {
             <img
               src={imgUrl}
               alt="img"
-              className="w-full h-full custom-transition"
+              className="w-full h-full custom-transition rounded-xl"
             />
           </div>
         </motion.div>

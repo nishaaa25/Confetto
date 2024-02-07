@@ -16,14 +16,14 @@ import {
 
 const PowerCard2 = () => {
   return (
-    <div className="powercard w-full h-[679px] relative one flex-between flex-row-reverse gap-7">
+    <div className="powercard w-full h-full lg:h-[679px] relative one flex-between flex-row-reverse flex-wrap lg:flex-nowrap gap-7">
       <div className="flex flex-col justify-start text-start items-start">
         <motion.h2
           variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl mb-5 w-[66%] font-[500]"
+          className="lg:text-3xl text-[28px] mb-5 w-full lg:w-[66%] font-[500]"
         >
           Compliance. Simplified.
         </motion.h2>
@@ -32,7 +32,7 @@ const PowerCard2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="para-text w-[74%] mb-8"
+          className="para-text w-full lg:w-[74%] mb-8"
         >
           With our app, you can digitize fieldwork processes, track your team's
           progress, and stay on top of tasks with ease. Say goodbye to
@@ -102,7 +102,7 @@ const PowerCard2 = () => {
           </motion.div>
         </motion.div>
       </div>
-      <div className="w-[105%] h-full relative rounded-3xl overflow-hidden">
+      <div className="w-[105%] h-[492px] lg:h-full relative rounded-3xl overflow-hidden">
         <motion.img
           variants={imgVariants}
           initial="hidden"
