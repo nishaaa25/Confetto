@@ -23,7 +23,7 @@ const PowerCard2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="lg:text-3xl text-[28px] mb-5 w-full lg:w-[66%] font-[500]"
+          className="lg:text-3xl text-[28px] md:text-[38px] md:leading-[45.6px] mb-5 w-full lg:w-[66%] font-[500]"
         >
           Compliance. Simplified.
         </motion.h2>
@@ -32,7 +32,7 @@ const PowerCard2 = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="para-text w-full lg:w-[74%] mb-8"
+          className="para-text w-full  sm:w-[60%] lg:w-[90%] mb-8"
         >
           With our app, you can digitize fieldwork processes, track your team's
           progress, and stay on top of tasks with ease. Say goodbye to
@@ -102,7 +102,7 @@ const PowerCard2 = () => {
           </motion.div>
         </motion.div>
       </div>
-      <div className="w-[105%] h-[492px] lg:h-full relative rounded-3xl overflow-hidden">
+      <div className="w-[105%] xl:h-full relative p-16 rounded-3xl overflow-hidden">
         <motion.img
           variants={imgVariants}
           initial="hidden"
@@ -110,7 +110,7 @@ const PowerCard2 = () => {
           viewport={{ once: true }}
           src={asset7}
           alt="backgroundImg"
-          className="w-full h-full object-cover z-0 blur-3xl"
+          className="w-full h-full object-cover absolute top-0 left-0 z-0 blur-3xl"
         />
         <motion.img
           variants={imgVariants2}
@@ -119,7 +119,7 @@ const PowerCard2 = () => {
           viewport={{ once: true }}
           src={asset22}
           alt="transactionImg"
-          className="w-[100%] h-[100%] absolute z-30  top-0 left-0  p-16 rounded-3xl"
+          className="w-[100%] h-auto xl:h-full relative z-30 rounded-3xl"
         />
       </div>
     </div>

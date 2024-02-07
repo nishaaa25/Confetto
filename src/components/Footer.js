@@ -7,8 +7,8 @@ import asset56 from "../assets/asset 56.svg";
 const Footer = () => {
   return (
     <footer id="footer" className="relative w-full h-full overflow-hidden">
-      <div className="footer-content bg-black relative z-10 mt-[1px] rounded-t-3xl lg:rounded-t-[100px]">
-        <div className="footer-text container relative p-7 ">
+      <div className="footer-content  bg-black relative z-10 mt-[1px] rounded-t-3xl lg:rounded-t-[90px]">
+        <div className="footer-text xl:w-[1340px] mx-auto relative p-7 ">
           <div className="footer-top flex-between flex-wrap lg:flex-nowrap mb-20 mt-8">
             <div className="footer-left flex justify-between items-start flex-col gap-8">
               <p className="font-[500]">Join for free career tips!</p>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <img src={asset56} alt="icon" className="cursor-pointer"/>
               </div>
             </div>
-            <div className="footer-right flex-wrap lg:flex-nowrap flex-between w-full lg:w-[460px] mt-20 lg:mt-0 gap-6">
+            <div className="footer-right flex-wrap md:flex-nowrap flex-between w-full lg:w-[460px] mt-20 lg:mt-0 gap-6">
               <ul className="w-full">
                 <li className="text-base font-[500] mb-5">Company</li>
                 <li className="text-[17px] mb-2 text-grey-600">
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="custom-border rounded-t-3xl lg:rounded-t-[100px]"></div>
+      <div className="custom-border rounded-t-3xl lg:rounded-t-[90px]"></div>
     </footer>
   );
 };

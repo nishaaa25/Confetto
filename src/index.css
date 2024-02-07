@@ -82,7 +82,7 @@ body {
     @apply text-whitesmoke font-[300] text-sm;
   }
   .para-text {
-    @apply text-grey-400 text-opacity-80 font-[300] text-sm md:text-base ;
+    @apply text-grey-400 text-opacity-80 font-[300] text-sm lg:text-base;
   }
   .card {
     @apply w-full rounded-2xl bg-black-600 border border-grey border-opacity-20 cursor-pointer;
@@ -92,10 +92,5 @@ body {
   }
   .active-card {
     @apply border-white opacity-100;
-  }
-}
-@layer components {
-  .container {
-    @apply w-full lg:w-[1340px] mx-auto relative h-full;
   }
 }

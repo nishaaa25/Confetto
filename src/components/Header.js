@@ -50,11 +50,11 @@ const Header = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 2.7, duration: 0.6 }}
     >
-      <div className="navbar bg-black-500 w-[60vw] lg:w-[668px] mx-auto py-1 lg:py-3 pl-[14px] pr-1 rounded-lg">
+      <div className="navbar bg-black-500 w-[260px] md:w-[668px] mx-auto py-1 pl-[14px] pr-1 rounded-lg">
         <div className="flex-between ">
           <img src={asset0} alt="logo" className="logo" />
           <div
-            className={`${active ? "bg-purple rounded-md":""} lg:hidden w-[40px] flex-center h-[40px] mr-1 cursor-pointer`}
+            className={`${active ? "bg-purple rounded-md":""} md:hidden w-[40px] flex-center h-[40px] mr-1 cursor-pointer`}
             onClick={() => {
               setActive(!active);
             }}
@@ -62,9 +62,9 @@ const Header = () => {
             <MenuRoundedIcon />
           </div>
           <div
-            className={`${active ? "block ": "hidden"} absolute top-[54px] left-0 lg:left-0 lg:top-0 lg:relative lg:block w-full py-2 lg:pl-12 custom-transition`}
+            className={`${active ? "block ": "hidden"} absolute top-[54px] left-0 md:left-0 md:top-0 md:relative md:block w-full py-2 md:pl-12 custom-transition`}
           >
-            <ul className="flex-between h-[290px] lg:h-full flex-col lg:flex-row w-full bg-[#0d0d0d] py-6 lg:p-0 lg:bg-transparent">
+            <ul className="flex-between h-[290px] md:h-full flex-col md:flex-row w-full bg-[#0d0d0d] py-6 md:p-0 md:bg-transparent">
               <li>
                 <a
                   href="#product"

@@ -23,7 +23,7 @@ const Reviews = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-2xl font-[500] gradient w-full lg:w-[20%] mx-auto mb-3"
+          className="text-2xl font-[500] gradient w-full lg:w-[400px] mx-auto mb-3"
         >
           +600 reviews
         </motion.p>
@@ -32,7 +32,7 @@ const Reviews = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="info-text w-[60%] lg:w-[14%] mx-auto"
+          className="info-text w-[60%] lg:w-[300px] mx-auto"
         >
           Companies building custom tools with Confetti.
         </motion.p>

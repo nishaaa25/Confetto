@@ -46,7 +46,7 @@ const Product = () => {
     ["-100px", "640px"]
   );
   return (
-    <div id="product" className="product w-full px-[20px] py-[70px] lg:p-[70px]">
+    <div id="product" className="product w-full px-[20px] py-[90px] lg:p-[70px]">
       <motion.div
         variants={productVariants}
         initial="hidden"
@@ -58,11 +58,11 @@ const Product = () => {
           variants={productImgVariants}
           src={asset7}
           alt="backgroundImg"
-          className=" mx-auto w-full h-[588px] lg:h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
+          className=" mx-auto w-full h-[588px] sm:h-[604px] lg:h-[942px]  object-cover absolute z-0 rounded-b-[60px]"
         />
         <motion.div
           variants={textVariants}
-          className="productText flex-center flex-col top-0 text-center relative z-40"
+          className="productText  mx-auto w-full sm:w-[460px] lg:w-[740px] flex-center flex-col top-0 text-center relative z-40"
         >
           <motion.div
             variants={variants}
@@ -73,11 +73,11 @@ const Product = () => {
           </motion.div>
           <motion.h1
             variants={variants}
-            className="text-xl lg:text-4xl font-[500] mb-7 w-full lg:w-[40%] "
+            className="text-xl sm:text-2xl lg:text-4xl font-[500] mb-7 w-full"
           >
             Streamline Your Banking Experience
           </motion.h1>
-          <motion.p variants={variants} className="info-text mb-10 w-[90%] lg:w-[29%]">
+          <motion.p variants={variants} className="info-text mb-10 w-full lg:w-[64%]">
             Experience hassle-free banking card management and transactions with
             our platform with our user-friendly interface.
           </motion.p>
@@ -99,7 +99,7 @@ const Product = () => {
           className="productImg h-[570px] lg:h-[1019px] relative z-40 w-full mx-auto mt-16 "
         >
           <motion.div
-            className="w-[280px] lg:w-[500px] mx-auto h-full relative "
+            className="w-[280px] lg:w-[500px] z-40 mx-auto h-full relative "
             style={{ translateY: translate }}
           >
             <img
@@ -134,7 +134,7 @@ const Product = () => {
           <motion.img
             src={asset6}
             alt="asset6"
-            className="hidden lg:block absolute -top-48 right-[180px] rounded-[30px] z-10"
+            className="hidden lg:block absolute -top-44 right-[180px] rounded-[30px] z-10"
             style={{ translateX: translateX2, translateY: translateY2 }}
           />
           <motion.img

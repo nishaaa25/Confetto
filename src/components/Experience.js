@@ -15,17 +15,17 @@ const Experience = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div id="experience" className="experience">
-      <div className="experience-content container text-center p-7">
-        <div className="experience-text pt-8 lg:pt-28 pb-3">
+    <div id="experience" className="experience w-full">
+      <div className="experience-content w-full xl:w-[1340px] xl:mx-auto  text-center p-7">
+        <div className="experience-text pt-8 xl:pt-28 pb-3">
           <motion.h1  variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} className="text-xl lg:text-4xl font-[500] mb-3">Seamless Experience</motion.h1>
+          viewport={{ once: true }} className="text-xl sm:text-2xl lg:text-4xl font-[500] mb-3">Seamless Experience</motion.h1>
           <motion.p  variants={childrenVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} className="info-text w-[80%] lg:w-[30%] mx-auto">
+          viewport={{ once: true }} className="info-text w-[80%] sm:w-[40%] lg:w-[360px] mx-auto">
             Our top features are designed to provide you with a seamless
             experience and make your financial management as easy as possible.
           </motion.p>
@@ -34,7 +34,7 @@ const Experience = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }} className="py-16">
-          <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 px-0 lg:px-28">
+          <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 px-0 xl:px-28">
             <div
               className={`card ${
                 active === 0 ? "active-card" : ""
